@@ -507,7 +507,6 @@ Business Logic: Reviews only after completed bookings
 CREATE TABLE Reviews (
     ReviewID INT AUTO_INCREMENT NOT NULL,
     BookingID INT NOT NULL,
-    ReviewType ENUM('GUEST_TO_HOST', 'HOST_TO_GUEST') NOT NULL,
     HostRating DECIMAL(3,2) NULL,
     OverallRating TINYINT NOT NULL,
     Comment TEXT NULL,
