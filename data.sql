@@ -3,7 +3,7 @@ AIRBNB DATABASE - PLANET ZEPHYRIA SAMPLE DATA
 Fantasy Planet: Multiple kingdoms, magical creatures, unique travel experiences
 */
 
-USE airbnb_db;
+USE testdb;
 /*
 PHASE 1: INDEPENDENT TABLES DATA - COMPLETE DATASETS
 */
@@ -952,7 +952,7 @@ ReservationID NOT NULL = Converted from reservation (references actual Reservati
 All bookings represent confirmed, paid transactions
 */
 
-INSERT IGNORE INTO airbnb_db.Bookings (ReservationID, UserID, ListingID, CheckInDate, CheckOutDate, NumberOfGuests, TotalPrice, BookingStatus, CreatedAt, SpecialRequests) VALUES
+INSERT IGNORE INTO testdb.Bookings (ReservationID, UserID, ListingID, CheckInDate, CheckOutDate, NumberOfGuests, TotalPrice, BookingStatus, CreatedAt, SpecialRequests) VALUES
 /* BATCH 1: Direct Bookings (ReservationID = NULL) */
 (NULL, 5, 12, '2026-03-01', '2026-03-06', 8, 1750.00, 'CONFIRMED', '2026-02-15 14:30:00', 'Dragon landing platform reservation, group fire ceremonies'),
 (NULL, 8, 8, '2026-03-10', '2026-03-13', 5, 1237.50, 'CONFIRMED', '2026-02-18 11:45:00', 'Phoenix nest luxury package, fire immunity potions included'),

@@ -1,10 +1,10 @@
 */
 
-USE airbnb_db;
+USE testdb;
 
 /*
 ================================================================
-SLIDE 1: USER TABLE
+1 USER TABLE
 Business Question: What is our user demographic breakdown and account health status?
 ================================================================
 */
@@ -17,7 +17,7 @@ GROUP BY AccountStatus;
 
 /*
 ================================================================
-SLIDE 2: STAFF TABLE
+2 STAFF TABLE
 Business Question: How is our support team structured and what are the experience levels across departments?
 ================================================================
 */
@@ -31,7 +31,7 @@ ORDER BY StaffCount DESC;
 
 /*
 ================================================================
-SLIDE 3: LANGUAGES TABLE
+LANGUAGES TABLE
 Business Question: Which languages do our hosts speak and how does this support international guests?
 ================================================================
 */
@@ -44,7 +44,7 @@ ORDER BY HostSpeakers DESC;
 
 /*
 ================================================================
-SLIDE 4: LISTINGADDRESSES TABLE
+LISTINGADDRESSES TABLE
 Business Question: What is our geographic coverage and where are listings concentrated?
 ================================================================
 */
@@ -56,7 +56,7 @@ ORDER BY ListingCount DESC;
 
 /*
 ================================================================
-SLIDE 5: PROPERTYTYPE TABLE
+PROPERTYTYPE TABLE
 Business Question: Which property types are most popular on our platform?
 ================================================================
 */
@@ -69,7 +69,7 @@ ORDER BY PropertyCount DESC;
 
 /*
 ================================================================
-SLIDE 6: EXPERIENCETYPES TABLE
+EXPERIENCETYPES TABLE
 Business Question: What types of experiences do we offer and which categories are most developed?
 ================================================================
 */
@@ -82,7 +82,7 @@ ORDER BY ExperienceCount DESC;
 
 /*
 ================================================================
-SLIDE 7: SERVICETYPES TABLE
+SERVICETYPES TABLE
 Business Question: What service categories are available and where should we focus growth?
 ================================================================
 */
@@ -95,7 +95,7 @@ ORDER BY ServiceCount DESC;
 
 /*
 ================================================================
-SLIDE 8: AMENITIES TABLE (CORRECTED - Removed LIMIT from GROUP_CONCAT)
+AMENITIES TABLE (CORRECTED - Removed LIMIT from GROUP_CONCAT)
 Business Question: How comprehensive is our amenity offering across different categories?
 ================================================================
 */
@@ -107,7 +107,7 @@ ORDER BY AmenityCount DESC;
 
 /*
 ================================================================
-SLIDE 9: SAVEDPAYMENTDETAILS TABLE
+SAVEDPAYMENTDETAILS TABLE
 Business Question: What payment methods do users prefer and how healthy is our payment portfolio?
 ================================================================
 */
@@ -121,7 +121,7 @@ ORDER BY UserCount DESC;
 
 /*
 ================================================================
-SLIDE 10: HOST TABLE
+HOST TABLE
 Business Question: What is our host verification success rate and quality metrics?
 ================================================================
 */
@@ -133,7 +133,7 @@ GROUP BY VerificationStatus;
 
 /*
 ================================================================
-SLIDE 11: ADDRESSES TABLE
+ADDRESSES TABLE
 Business Question: Where are our users located and what address types do they provide?
 ================================================================
 */
@@ -145,7 +145,7 @@ LIMIT 10;
 
 /*
 ================================================================
-SLIDE 12: TAXDOCUMENTS TABLE
+TAXDOCUMENTS TABLE
 Business Question: How compliant are our hosts with tax documentation and how efficient is our processing?
 ================================================================
 */
@@ -158,7 +158,7 @@ GROUP BY DocumentType;
 
 /*
 ================================================================
-SLIDE 13: HOST_LANGUAGES TABLE
+HOST_LANGUAGES TABLE
 Business Question: What language skills do our hosts have and at what proficiency levels?
 ================================================================
 */
@@ -170,7 +170,7 @@ ORDER BY HostCount DESC;
 
 /*
 ================================================================
-SLIDE 14: LISTING TABLE
+LISTING TABLE
 Business Question: What is our listing portfolio composition and pricing strategy by type?
 ================================================================
 */
@@ -182,7 +182,7 @@ ORDER BY ListingCount DESC;
 
 /*
 ================================================================
-SLIDE 15: AVAILABILITY_CALENDAR TABLE (CORRECTED - Shows actual data range)
+AVAILABILITY_CALENDAR TABLE (CORRECTED - Shows actual data range)
 Business Question: How much booking capacity do we have available in the upcoming period?
 ================================================================
 */
@@ -196,7 +196,7 @@ LIMIT 10;
 
 /*
 ================================================================
-SLIDE 16: PROPERTY TABLE
+PROPERTY TABLE
 Business Question: What are the accommodation characteristics and capacity distribution of our properties?
 ================================================================
 */
@@ -208,7 +208,7 @@ ORDER BY PropertyCount DESC;
 
 /*
 ================================================================
-SLIDE 17: EXPERIENCE TABLE
+EXPERIENCE TABLE
 Business Question: When are experiences typically offered and what difficulty levels do we provide?
 ================================================================
 */
@@ -219,7 +219,7 @@ GROUP BY TimeOfDay, PhysicalDemand;
 
 /*
 ================================================================
-SLIDE 18: SERVICE TABLE
+SERVICE TABLE
 Business Question: What are the delivery patterns and location flexibility of our services?
 ================================================================
 */
@@ -232,7 +232,7 @@ GROUP BY TimeOfDay;
 
 /*
 ================================================================
-SLIDE 19: LISTINGPHOTOS TABLE
+LISTINGPHOTOS TABLE
 Business Question: How complete is our visual marketing across different photo categories?
 ================================================================
 */
@@ -244,7 +244,7 @@ ORDER BY PhotoCount DESC;
 
 /*
 ================================================================
-SLIDE 20: RESERVATIONS TABLE
+RESERVATIONS TABLE
 Business Question: How effective is our reservation system and what are typical booking patterns?
 ================================================================
 */
@@ -256,7 +256,7 @@ GROUP BY Status;
 
 /*
 ================================================================
-SLIDE 21: BOOKINGS TABLE
+BOOKINGS TABLE
 Business Question: What are our monthly booking trends and revenue patterns by status?
 ================================================================
 */
@@ -270,7 +270,7 @@ ORDER BY Month, BookingCount DESC;
 
 /*
 ================================================================
-SLIDE 22: BOOKINGPAYMENT TABLE
+BOOKINGPAYMENT TABLE
 Business Question: How is our payment processing performing and where is revenue flowing?
 ================================================================
 */
@@ -282,7 +282,7 @@ ORDER BY TotalAmount DESC;
 
 /*
 ================================================================
-SLIDE 23: CANCELLATIONS TABLE
+CANCELLATIONS TABLE
 Business Question: Who is cancelling bookings and what is the financial impact of refunds?
 ================================================================
 */
@@ -294,7 +294,7 @@ ORDER BY CancellationCount DESC;
 
 /*
 ================================================================
-SLIDE 24: REVIEWS TABLE (CORRECTED - Removed problematic GROUP_CONCAT with LIMIT)
+REVIEWS TABLE (CORRECTED - Removed problematic GROUP_CONCAT with LIMIT)
 Business Question: What is our overall guest satisfaction and how are hosts performing?
 ================================================================
 */
@@ -306,7 +306,7 @@ ORDER BY OverallRating DESC;
 
 /*
 ================================================================
-SLIDE 25: MESSAGES TABLE (Recursive Relationship)
+MESSAGES TABLE (Recursive Relationship)
 Business Question: Which bookings generate the most communication and how are conversations structured?
 ================================================================
 */
@@ -322,7 +322,7 @@ LIMIT 10;
 
 /*
 ================================================================
-SLIDE 26: PAYMENT_ACCOUNT TABLE (Ternary Relationship)
+PAYMENT_ACCOUNT TABLE (Ternary Relationship)
 Business Question: How do hosts manage their banking setup and what is their verification success rate?
 ================================================================
 */
@@ -335,7 +335,7 @@ ORDER BY AccountCount DESC;
 
 /*
 ================================================================
-SLIDE 27: SEASONAL_AVAILABILITY TABLE (Ternary Relationship)
+SEASONAL_AVAILABILITY TABLE (Ternary Relationship)
 Business Question: How do seasonal changes affect amenity availability across our properties?
 ================================================================
 */
