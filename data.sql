@@ -145,7 +145,7 @@ INSERT INTO PropertyType (TypeName, TypeDescription) VALUES
 
 
 /* 6 EXPERIENCETYPES TABLE - Magical Experiences (20 records) */
-INSERT INTO ExperienceTypes (TypeName, TypeDescription) VALUES
+INSERT INTO ExperienceType (TypeName, TypeDescription) VALUES
 ('Dragon Riding', 'Guided flights on friendly dragons across kingdoms'),
 ('Spell Weaving', 'Learn basic magic from certified wizards'),
 ('Crystal Mining', 'Supervised mining expeditions in crystal caves'),
