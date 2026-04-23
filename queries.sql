@@ -69,7 +69,7 @@ ORDER BY PropertyCount DESC;
 
 /*
 ================================================================
-EXPERIENCETYPES TABLE
+EXPERIENCETYPE TABLE
 Business Question: What types of experiences do we offer and which categories are most developed?
 ================================================================
 */
@@ -82,7 +82,7 @@ ORDER BY ExperienceCount DESC;
 
 /*
 ================================================================
-SERVICETYPES TABLE
+SERVICETYPE TABLE
 Business Question: What service categories are available and where should we focus growth?
 ================================================================
 */
