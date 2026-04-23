@@ -88,20 +88,20 @@ CREATE TABLE PropertyType (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*
-6. EXPERIENCETYPES TABLE
+6. EXPERIENCETYPE TABLE
 Purpose: Categories for experience types
 */
-CREATE TABLE ExperienceTypes (
+CREATE TABLE ExperienceType (
     ExperienceTypeID INT AUTO_INCREMENT PRIMARY KEY,
     TypeName VARCHAR(50) UNIQUE NOT NULL,
     TypeDescription VARCHAR(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*
-7. SERVICETYPES TABLE
+7. SERVICETYPE TABLE
 Purpose: Categories for service types
 */
-CREATE TABLE ServiceTypes (
+CREATE TABLE ServiceType (
     ServiceTypeID INT AUTO_INCREMENT PRIMARY KEY,
     TypeName VARCHAR(50) UNIQUE NOT NULL,
     TypeDescription VARCHAR(255)
