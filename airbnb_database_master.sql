@@ -349,13 +349,13 @@ CREATE TABLE Experience (
     CONSTRAINT Experience_listing_FK FOREIGN KEY (ListingID) 
         REFERENCES Listing(ListingID) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT Experience_type_FK FOREIGN KEY (ExperienceTypeID) 
-        REFERENCES ExperienceTypes(ExperienceTypeID) ON DELETE CASCADE ON UPDATE CASCADE
+        REFERENCES ExperienceType(ExperienceTypeID) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*
 18. SERVICE TABLE (Child of Listing)
 Purpose: Service-specific details
-Dependencies: Listing table, ServiceTypes table
+Dependencies: Listing table, ServiceType table
 Business Logic: Inheritance - Service IS-A Listing
 */
 CREATE TABLE Service (
@@ -373,7 +373,7 @@ CREATE TABLE Service (
     CONSTRAINT Service_listing_FK FOREIGN KEY (ListingID) 
         REFERENCES Listing(ListingID) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT Service_type_FK FOREIGN KEY (ServiceTypeID) 
-        REFERENCES ServiceTypes(ServiceTypeID) ON DELETE CASCADE ON UPDATE CASCADE
+        REFERENCES ServiceType(ServiceTypeID) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*
