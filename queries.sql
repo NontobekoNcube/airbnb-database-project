@@ -75,7 +75,7 @@ Business Question: What types of experiences do we offer and which categories ar
 */
 SELECT et.TypeName, et.TypeDescription,
        COUNT(e.ExperienceID) as ExperienceCount
-FROM ExperienceTypes et
+FROM ExperienceType et
 LEFT JOIN Experience e ON et.ExperienceTypeID = e.ExperienceTypeID  
 GROUP BY et.ExperienceTypeID
 ORDER BY ExperienceCount DESC;
@@ -88,7 +88,7 @@ Business Question: What service categories are available and where should we foc
 */
 SELECT st.TypeName, st.TypeDescription,
        COUNT(s.ServiceID) as ServiceCount
-FROM ServiceTypes st
+FROM ServiceType st
 LEFT JOIN Service s ON st.ServiceTypeID = s.ServiceTypeID
 GROUP BY st.ServiceTypeID
 ORDER BY ServiceCount DESC;
