@@ -169,7 +169,7 @@ INSERT INTO ExperienceType (TypeName, TypeDescription) VALUES
 
 
 /*7 SERVICETYPES TABLE - Magical Services (21 records) */
-INSERT INTO ServiceTypes (TypeName, TypeDescription) VALUES
+INSERT INTO ServiceType (TypeName, TypeDescription) VALUES
 ('Spell Casting', 'Custom magic spells performed by certified mages'),
 ('Portal Transportation', 'Instant travel between designated portal points'),
 ('Healing Magic', 'Magical healing services for injuries and ailments'),
