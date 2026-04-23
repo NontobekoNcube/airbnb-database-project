@@ -9,12 +9,15 @@ USE testdb;
 
 /*
 PHASE 1: INDEPENDENT TABLES
+*/
+
 /*
 1. USER TABLE
 Purpose: Stores users of the database
 Business logic: Anyone who signs up is a user, a Host is a specialized User, addresses link back to User
 Dependencies: None (completely independent)
 */
+
 CREATE TABLE `User` (
     UserID INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(50) NOT NULL,
